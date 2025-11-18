@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Bellbox - Nikmati Makan Lezat dan Sehat Bersama Bellbox</title>
+  <meta name="title" content="Bellbox - Nikmati Makan Lezat dan Sehat Bersama Bellbox">
+  <meta name="description" content="This is a food html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="icon" href="./assets/images/favicon2.jpeg">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="loading-container" data-loading-container>
+    <div class="loading-circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo-icon1.png" width="150" height="38" alt="Fasteat home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/icon2.png" width="148" height="38" alt="Fasteat home">
+        </a>
+
+      </nav>
+
+      <div class="header-action">
+
+        <a href="https://wa.me/6285812358172?text=Halo, Admin Saya tertarik untuk Berlangganan Catering Harian Anda."
+   target="_blank" rel="noopener"
+   class="btn btn-primary has-after">
+  Pesan Sekarang
+</a>
+      </div>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content" data-reveal="left">
+            <h1 class="h1 hero-title">Nikmati Makan Lezat dan Sehat</h1>
+
+            <h2 class="hero-text">
+              Setiap Hari Bersama Catering Harian
+            </h2>
+
+            <h1 class="h1 hero-title">BellBox!</h1>
+
+            <a href="https://wa.me/6285812358172?text=Halo, Admin Saya tertarik untuk Berlangganan Catering Harian Anda."
+   target="_blank" rel="noopener"
+   class="btn btn-secondary has-after">
+  Pesan Sekarang
+</a>
+            
+          </div>
+
+          <figure class="hero-banner" data-reveal>
+
+            <img src="./assets/images/hero-banner3.png" width="680" height="720" alt="hero banner" class="w-100">
+
+          </figure>
+
+        </div>
+      </section>
+
+
+
+       <!-- STATISTIK CUST -->
+       <section id="counter" class="counter-section">
+        <div class="container">
+          <div class="stats-card" role="region" aria-label="Statistik pelanggan">
+            <h1 class="overline">Lebih dari</h1>
+      
+            <div class="stats-value">
+              <span id="count2" data-target="2500">0</span><span class="plus">+</span>
+            </div>
+      
+            <h2 class="stats-text">
+              Pelanggan telah mempercayakan kebutuhan makannya bersama kami setiap bulannya
+            </h2>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .counter-section { padding: 20px 0; }
+        .stats-card{
+          max-width: 1200px; margin: 0 auto; text-align: center;
+          padding: 24px 20px; border-radius: 16px;
+          background: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+        .overline{
+          margin: 0 0 8px; font-size: 25px; letter-spacing: .08em;
+          text-transform: uppercase; color: #6b7280;
+        }
+        .stats-value{
+          display: inline-flex; align-items: baseline; gap: 6px;
+          font-weight: 900; color: #137c34;
+          line-height: 1;
+          font-size: clamp(36px, 6vw, 72px);
+        }
+        .stats-value .plus{ font-size: .7em; color: #10b981; }
+        .stats-text{
+          margin: 10px auto 0; max-width: 46ch;
+          font-size: clamp(14px, 1.4vw, 16px);
+          color: #374151; line-height: 1.5;
+        }
+      </style>
+      
+      <script>
+        (function(){
+          const el = document.getElementById('count2');
+          if(!el) return;
+      
+          const target = parseInt(el.dataset.target || '0', 10);
+          const duration = 1200; // ms
+          const fmt = new Intl.NumberFormat('id-ID');
+      
+          function animateCount(){
+            const start = performance.now();
+            function tick(now){
+              const p = Math.min(1, (now - start) / duration);
+              const value = Math.floor(p * target);
+              el.textContent = fmt.format(value);
+              if(p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          }
+      
+          if ('IntersectionObserver' in window){
+            const io = new IntersectionObserver(entries => {
+              entries.forEach(e => {
+                if (e.isIntersecting){
+                  animateCount();
+                  io.disconnect();
+                }
+              });
+            }, { threshold: 0.3 });
+            io.observe(el);
+          } else {
+            animateCount();
+          }
+        })();
+      </script>
+      
+
+
+
+
+ <!-- 
+        - #CTA
+      -->
+   <!-- 
+        - #TESTIMONIALS
+      -->
+
+      <section class="section cta has-bg-image" aria-labelledby="cta-label"
+      style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="testi-content" data-reveal="left">
+
+
+              <div class="about-content">
+  
+                <ul class="about-list">
+    
+                  <li class="about-item">
+        
+                    <span class="span">⚫ Bingung Karena Harus Jaga Pola Makan Setiap Hari ?</span>
+                  </li>
+    
+                  <li class="about-item">
+    
+                    <span class="span">⚫ Mau Pesan Makan Online Tapi Ongkir nya bikin kantong jebol ?</span>
+                  </li>
+    
+                  <li class="about-item">
+              
+                    <span class="span">⚫ Sedang Sibuk dan Sempet Beli Makan Diluar ?</span>
+                  </li>
+    
+                  <h3 class="section-text" style="text-align:justify; text-justify:inter-word;">
+                    Bellbox hadir sebagai solusi catering harian yang bisa Anda andalkan di Kota Malang! 
+                    Dengan menu bervariasi dan bahan berkualitas, kami siap mengantar makanan terbaik langsung ke pintu Anda.
+                  </h3>
+                  
+    
+                  <h2 class="h3 section-title" id="cta-label">
+                    Mulai Dari <span class="span">18.000an</span> Udah Dapet Apa Aja ?
+                  </h2>
+    
+                </ul>
+  
+                <a href="https://wa.me/6285812358172?text=Halo, Admin Saya tertarik untuk Berlangganan Catering Harian Anda."
+   target="_blank" rel="noopener"
+   class="btn btn-primary has-after"
+   style="display:block; width:max-content; margin:0 auto;">
+  Pesan Sekarang
+</a>
+
+  
+            </div>
+
+          </div>
+
+          <figure class="testi-banner" data-reveal="right">
+            <img src="./assets/images/menu-banner.png" width="680" height="588" alt="testimonial banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #INSTRUCTION
+      -->
+
+      <section class="section instruction" aria-labelledby="">
+        <div class="container">
+
+          <h2 class="h2 section-title" id="instruction-label" data-reveal> Kenapa Harus Pilih Bellbox? </h2>
+
+          <p class="section-text" data-reveal>
+            
+          </p>
+
+          <ul class="grid-list">
+
+            <li data-reveal="left">
+              <div class="instruction-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/about-1.png" width="300" height="154" loading="lazy"
+                    alt="Select Restaurant" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5 card-title">
+                    <span class="span">01</span>
+                    Menu Variatif & Lezat
+                  </h3>
+
+                  <p class="card-text">
+                    Dapatkan pengalaman makan yang berbeda setiap hari dengan menu beragam mulai dari masakan Indonesia, Asia, hingga Western!
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-reveal>
+              <div class="instruction-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/about-2.png" width="300" height="154" loading="lazy"
+                    alt="Select menu" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5 card-title">
+                    <span class="span">02</span>
+                    Bebas Pilih Hari
+                  </h3>
+
+                  <p class="card-text">
+                    Bebas pilih jadwal pengantaran mulai Pagi, Siang Malam dan skip hari jika berhalangan
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-reveal="right">
+              <div class="instruction-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/about-3.png" width="300" height="154" loading="lazy"
+                    alt="Wait for delivery" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5 card-title">
+                    <span class="span">03</span>
+                    Gratis Ongkir di Kota Malang
+                  </h3>
+
+                  <p class="card-text">
+                    Pesanan Anda akan diantar tanpa biaya tambahan ke seluruh area Malang, tepat waktu dan dalam keadaan hangat.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-reveal="right">
+              <div class="instruction-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/about-4.png" width="300" height="154" loading="lazy"
+                    alt="Wait for delivery" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5 card-title">
+                    <span class="span">04</span>
+                    Harga Terjangkau
+                  </h3>
+
+                  <p class="card-text">
+                    Paket-paket kami dibuat sesuai kebutuhan harian Anda, mulai dari Rp18.000 per porsi!
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+<!-- 
+        - #TESTIMONIAL
+      -->
+
+<!-- ====== Section Testimoni (Slider Manual, 3 terlihat) ====== -->
+<section class="section partnership" aria-label="partnership">
+  <div class="container">
+
+    <h2 class="h2 section-title">
+      Masih Ragu?    <h3 class="section-title">
+        Ini Kata Mereka Tentang Catering Harian BellBox
+      </h3>
+    </h2>
+
+    <div id="testi-slider" class="slider" aria-roledescription="carousel" aria-label="Testimoni WhatsApp">
+      <button class="nav prev" aria-label="Sebelumnya">‹</button>
+
+      <ul class="slides">
+        <!-- Slide 1 -->
+        <li class="slide">
+          <div class="partnership-card">
+            <figure class="card-banner img-holder">
+              <img src="./assets/images/wa-1.jpeg" loading="lazy" alt="Testimoni WhatsApp 1" class="img-cover">
+            </figure>
+          </div>
+        </li>
+
+        <!-- Slide 2 -->
+        <li class="slide">
+          <div class="partnership-card">
+            <figure class="card-banner img-holder">
+              <img src="./assets/images/wa-2.jpeg" loading="lazy" alt="Testimoni WhatsApp 2" class="img-cover">
+            </figure>
+          </div>
+        </li>
+
+        <!-- Slide 3 -->
+        <li class="slide">
+          <div class="partnership-card">
+            <figure class="card-banner img-holder">
+              <img src="./assets/images/wa-3.jpeg" loading="lazy" alt="Testimoni WhatsApp 3" class="img-cover">
+            </figure>
+          </div>
+        </li>
+
+        <!-- Slide 4 -->
+        <li class="slide">
+          <div class="partnership-card">
+            <figure class="card-banner img-holder">
+              <img src="./assets/images/wa-4.jpeg" loading="lazy" alt="Testimoni WhatsApp 4" class="img-cover">
+            </figure>
+          </div>
+        </li>
+      </ul>
+
+      <button class="nav next" aria-label="Berikutnya">›</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== Slider Manual JS (geser per 1 kartu) ====== -->
+<script>
+  (function () {
+    const slider = document.getElementById('testi-slider');
+    const track  = slider.querySelector('.slides');
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    const prev   = slider.querySelector('.prev');
+    const next   = slider.querySelector('.next');
+
+    let index = 0, total = slides.length;
+
+    function getMetrics() {
+      const cs = getComputedStyle(track);
+      const gap = parseFloat(cs.gap) || 16; // fallback 16px
+      const w   = slides[0].getBoundingClientRect().width;
+      const visible = Math.max(1, Math.floor((slider.clientWidth + gap) / (w + gap)));
+      return { gap, w, visible };
+    }
+
+    function goTo(i) {
+      const { gap, w, visible } = getMetrics();
+      const maxIndex = Math.max(0, total - visible);
+      index = ((i % (maxIndex + 1)) + (maxIndex + 1)) % (maxIndex + 1);
+      const offset = -(index * (w + gap));
+      track.style.transform = `translateX(${offset}px)`;
+    }
+
+    prev.addEventListener('click', () => goTo(index - 1));
+    next.addEventListener('click', () => goTo(index + 1));
+
+    // Keyboard
+    slider.tabIndex = 0;
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  goTo(index - 1);
+      if (e.key === 'ArrowRight') goTo(index + 1);
+    });
+
+    // Swipe
+    let startX = 0, deltaX = 0, dragging = false;
+    track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; dragging = true; }, { passive: true });
+    track.addEventListener('touchmove', (e) => { if (!dragging) return; deltaX = e.touches[0].clientX - startX; }, { passive: true });
+    track.addEventListener('touchend', () => {
+      if (!dragging) return;
+      const threshold = 50;
+      if (deltaX >  threshold) goTo(index - 1);
+      if (deltaX < -threshold) goTo(index + 1);
+      dragging = false; deltaX = 0;
+    });
+
+    window.addEventListener('resize', () => goTo(index));
+
+    // Tampilkan 3 pada load (jika lebar cukup)
+    goTo(0);
+  })();
+</script>
+
+<!-- ====== Styling (3 kartu per view) ====== -->
+<style>
+  .partnership { padding: 60px 0; overflow: hidden; }
+  .section-title { text-align: center; margin-bottom: 1.5rem; }
+
+  .slider { position: relative; width: 100%; overflow: hidden; }
+  .slides {
+    display: flex; margin: 0; padding: 0; list-style: none;
+    transition: transform 0.4s ease;
+    gap: 16px; /* jarak antar kartu */
+  }
+
+  /* 3 item terlihat: basis = (100% - 2*gap)/3 */
+  .slide { flex: 0 0 calc((100% - 32px) / 3); display: flex; justify-content: center; }
+
+  .partnership-card {
+    width: 100%; max-width: none;
+    border-radius: 10px; overflow: hidden; background: #fff;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  }
+  .card-banner img { width: 100%; height: auto; display: block; }
+
+  .nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 0; background: rgba(0,0,0,0.6); color: #fff;
+    display: grid; place-items: center; cursor: pointer;
+  }
+  .nav.prev { left: 12px; }
+  .nav.next { right: 12px; }
+  .nav:focus { outline: 2px solid #fff; outline-offset: 2px; }
+</style>
+
+
+
+  <!-- 
+        - #MENU
+      -->
+
+<!-- ====== Section Menu Makanan (2 Kolom Responsif) ====== -->
+<section class="section top-restaurant" aria-labelledby="menu-makanan-label">
+  <div class="container">
+
+    <h2 class="h2 section-title" id="menu-makanan-label">
+      Pilihan Paket Catering Harian Bellbox
+    </h2>
+
+    <p class="section-text">
+      Pilihan menu lezat yang siap kamu order — dari lauk rumahan hingga hidangan spesial bergizi.
+    </p>
+
+    <!-- ====== Grid Menu (2 Kolom) ====== -->
+    <div class="menu-grid">
+      <!-- Menu 1 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu1.png" alt="Paket Hemat Mingguan" loading="lazy" class="menu-img">
+        <h3 class="menu-title">Paket Hemat Mingguan</h3>
+        <p class="menu-desc">Nasi, lauk utama, sayur, dan buah segar.</p>
+        <p class="menu-price">Mulai dari Rp126.000/Minggu</p>
+
+      </div>
+
+      <!-- Menu 2 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu2.png" alt="Paket Bulanan" loading="lazy" class="menu-img">
+        <h3 class="menu-title">Paket Bulanan</h3>
+        <p class="menu-desc"> Nasi, lauk utama, sayur, Lauk pendamping dan buah segar..</p>
+        <p class="menu-price">Mulai dari Rp507.000/Bulan</p>
+    
+      </div>
+    </div>
+
+    <!-- ====== Order Summary ====== -->
+    <div class="order-summary">
+
+      <h3>🛒 Order Sekarang</h3>
+
+      <a href="https://wa.me/6285812358172?text=Halo, Admin Saya tertarik untuk Berlangganan Catering Harian Anda."
+   target="_blank" rel="noopener"
+   class="btn btn-primary has-after">
+  Pesan Disini
+</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====== Styling (2 Kolom Responsif) ====== -->
+<style>
+  .top-restaurant {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  /* === Grid Menu Layout: Hanya 2 Kolom === */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .menu-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding-bottom: 15px;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .menu-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+
+  .menu-desc {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px;
+  }
+
+  .menu-price {
+    font-weight: bold;
+    color: #ff6600;
+    margin: 8px 0;
+  }
+
+  .order-btn {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .order-btn:hover {
+    background: #e05b00;
+  }
+
+  .order-summary {
+    margin-top: 40px;
+    background: #fff7f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .order-summary h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  .order-summary li {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+  }
+
+  #checkout-btn {
+    display: block;
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  #checkout-btn:hover {
+    background: #218838;
+  }
+</style>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="section footer-top grid-list">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-icon2.png" width="200" height="38" alt="fasteat home">
+          </a>
+
+          <h2 class="h2 section-title">Catering Harian BellBox! Adalah Solusi</h2>
+
+          <p class="section-text">
+            
+          </p>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title h5">Menu</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">Home</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">About Us</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">Contacts</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title h5">Contacts</p>
+          </li>
+
+          <li>
+            <address class="address">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+
+              <span class="span">Jalan Raya Bamban No. 222. Pakis Kabupaten Malang</span>
+            </address>
+          </li>
+
+          <li>
+            <a href="mailto:quickeat@mail.net" class="footer-link">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+              <span class="span">bellbox@gmail.com</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tel:+12344567890" class="footer-link">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+              <span class="span">+62812-3444-0695</span>
+            </a>
+          </li>
+
+          <li>
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-tiktok"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          Copyright 2025. All rights reserved. 
+          <a href="https://instagram.com/abdimas_aja?igshid=YmMyMTA2M2Y=">@Abdimas_aja</a>
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <base href="/bellbox2.id/">
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +19,14 @@
     - favicon
   -->
   <link rel="icon" href="./assets/images/favicon2.jpeg">
+
+<!-- Fallback: tampilkan semua elemen yang memakai data-reveal -->
+<style>
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  [data-loading-container]{ display: none !important; } /* matikan preloader */
+</style>
+
+
   <!-- 
     - custom css link
   -->
@@ -863,7 +873,7 @@
 <!-- sebelum: <script src="./assets/js/script.js"></script> -->
 <script defer src="./assets/js/script.js"></script>
 
-  <script src="./assets/js/script.js"></script>
+  <script defer src="./assets/js/script.js"></script>
 
   <!-- 
     - ionicon link

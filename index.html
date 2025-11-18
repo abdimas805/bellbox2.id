@@ -231,33 +231,18 @@
               <div class="about-content">
   
                 <ul class="about-list">
-    
-                  <li class="about-item">
-        
-                    <span class="span">⚫ Bingung Karena Harus Jaga Pola Makan Setiap Hari ?</span>
-                  </li>
-    
-                  <li class="about-item">
-    
-                    <span class="span">⚫ Mau Pesan Makan Online Tapi Ongkir nya bikin kantong jebol ?</span>
-                  </li>
-    
-                  <li class="about-item">
-              
-                    <span class="span">⚫ Sedang Sibuk dan Sempet Beli Makan Diluar ?</span>
-                  </li>
-    
-                  <h3 class="section-text" style="text-align:justify; text-justify:inter-word;">
-                    Bellbox hadir sebagai solusi catering harian yang bisa Anda andalkan di Kota Malang! 
-                    Dengan menu bervariasi dan bahan berkualitas, kami siap mengantar makanan terbaik langsung ke pintu Anda.
-                  </h3>
-                  
-    
-                  <h2 class="h3 section-title" id="cta-label">
-                    Mulai Dari <span class="span">18.000an</span> Udah Dapet Apa Aja ?
-                  </h2>
-    
-                </ul>
+                    <li class="about-item"><span class="span">⚫ Bingung Karena Harus Jaga Pola Makan Setiap Hari ?</span></li>
+                      <li class="about-item"><span class="span">⚫ Mau Pesan Makan Online Tapi Ongkir nya bikin kantong jebol ?</span></li>
+                        <li class="about-item"><span class="span">⚫ Sedang Sibuk dan Sempet Beli Makan Diluar ?</span></li>
+                      </ul>
+                      <h3 class="section-text" style="text-align:justify; text-justify:inter-word;">
+                          Bellbox hadir sebagai solusi catering harian yang bisa Anda andalkan di Kota Malang!
+                            Dengan menu bervariasi dan bahan berkualitas, kami siap mengantar makanan terbaik langsung ke pintu Anda.
+                          </h3>
+                          <h2 class="h3 section-title" id="cta-label">
+                              Mulai Dari <span class="span">18.000an</span> Udah Dapet Apa Aja ?
+                            </h2>
+
   
                 <a href="https://wa.me/6285812358172?text=Halo, Admin Saya tertarik untuk Berlangganan Catering Harian Anda."
    target="_blank" rel="noopener"
@@ -410,11 +395,9 @@
 <section class="section partnership" aria-label="partnership">
   <div class="container">
 
-    <h2 class="h2 section-title">
-      Masih Ragu?    <h3 class="section-title">
-        Ini Kata Mereka Tentang Catering Harian BellBox
-      </h3>
-    </h2>
+    <h2 class="h2 section-title">Masih Ragu?</h2>
+<h3 class="section-title">Ini Kata Mereka Tentang Catering Harian BellBox</h3>
+
 
     <div id="testi-slider" class="slider" aria-roledescription="carousel" aria-label="Testimoni WhatsApp">
       <button class="nav prev" aria-label="Sebelumnya">‹</button>
@@ -462,6 +445,7 @@
 
   </div>
 </section>
+
 
 <!-- ====== Slider Manual JS (geser per 1 kartu) ====== -->
 <script>
@@ -876,6 +860,9 @@
   <!-- 
     - custom js link
   -->
+<!-- sebelum: <script src="./assets/js/script.js"></script> -->
+<script defer src="./assets/js/script.js"></script>
+
   <script src="./assets/js/script.js"></script>
 
   <!-- 
@@ -883,6 +870,14 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+  window.addEventListener('load', function () {
+    const c = document.querySelector('[data-loading-container]');
+    if (c) c.style.display = 'none';
+  });
+</script>
+
 
 </body>
 
